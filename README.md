@@ -1,0 +1,5 @@
+# Nucleus
+
+## Setup
+
+	npm install
