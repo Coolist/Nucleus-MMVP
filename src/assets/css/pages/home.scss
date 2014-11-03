@@ -73,6 +73,11 @@ a {
 .home-faq {
   padding: 6em 0;
   background: linear-gradient(to bottom, #F6F3EF 0%, #FFFFFF 100%);
+  background-image: url(../images/faq.png), linear-gradient(to bottom, #F6F3EF 0%, #FFFFFF 100%);
+  background-position: center top, center center;
+  background-size: 1428px 570px, 100% 100%;
+  background-repeat: no-repeat;
+
 
   > .container {
     max-width: 960px;
