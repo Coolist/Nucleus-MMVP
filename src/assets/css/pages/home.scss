@@ -19,6 +19,12 @@ h2 {
   margin-bottom: 1.6em;
 }
 
+h3 {
+  font-weight: 500;
+  font-size: 1.25em;
+  margin: 0.5em 0 1.2em 0;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.5;
@@ -47,14 +53,104 @@ p {
   padding: 6em 0;
   border-bottom: 1px solid rgba(37, 37, 37, 0.1);
 
-    @include breakpoint(small) {
-      padding: 4em 0;
-    }
+  @include breakpoint(small) {
+    padding: 4em 0;
+  }
 
   p {
     max-width: 440px;
     font-weight: 300;
     text-align: center;
     margin: auto;
+  }
+}
+
+.home-faq {
+  padding: 6em 0;
+  background: linear-gradient(to bottom, #f6f3ef 0%,#ffffff 100%);
+
+  > .container {
+    max-width: 960px;
+  }
+
+  @include breakpoint(small) {
+    padding: 4em 0;
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 1.4;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+}
+
+.home-footer {
+  padding-bottom: 2em;
+
+  > .container {
+    max-width: 960px;
+  }
+
+  .navigation {
+    padding-top: 6rem;
+  }
+
+  .left {
+    float: left;
+
+    ul {
+      padding-left: 3rem;
+    }
+
+    li {
+      padding-left: 1.5rem;
+      opacity: 0.5;
+    }
+  }
+
+  .right {
+    float: right;
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      padding-right: 1.5rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    display: inline;
+  }
+
+  li {
+    display: inline;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  @include breakpoint(small) {
+    padding: 4em 0;
+  }
+
+  span.questions {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+
+    a {
+      font-weight: 700;
+    }
+  }
+
+  span.logo {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "museo-slab", sans-serif;
   }
 }
