@@ -433,7 +433,7 @@ a {
 
 
     .state {
-      width: 100px; 
+      width: 140px; 
       position: absolute;
       top: 3px;
       left: 65px;
@@ -449,6 +449,10 @@ a {
 
     .checkbox:checked ~ .background {
       background-color: #87DA6A;
+    }
+
+    &.toggle--yellow .checkbox:checked ~ .background {
+      background-color: #FCBE17;
     }
 
     .checkbox:checked ~ .switch {
