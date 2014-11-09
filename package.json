@@ -16,7 +16,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "coffee index.coffee",
     "deploy": "aws s3 sync ./build/ s3://nucleushome.com/"
   },
   "repository": {
