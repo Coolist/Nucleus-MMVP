@@ -221,7 +221,7 @@ a {
   cursor: pointer;
 
   &:hover {
-    margin-top: -8px;
+    transform: translateY(-3px);
     transition: all 0.2s ease-in-out;
   }
 }
@@ -237,11 +237,19 @@ a {
 .add-trigger .circle {
   background-color: #82BBDF;
   color: #FFF;
+
+  &:hover {
+    background-color: darken(#82BBDF, 5);
+  }
 }
 
 .add-action .circle {
   background-color: #82BBDF;
   color: #FFF;
+
+  &:hover {
+    background-color: darken(#82BBDF, 5);
+  }
 }
 
 .arrow-down {
