@@ -522,3 +522,61 @@ a {
     }
   }
 }
+
+/* Timeline */
+
+.timeline {
+  max-width: 400px;
+  padding-top: 4em;
+  position: relative;
+  margin-bottom: -3em;
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  .item {
+    width: 100%;
+    position: relative;
+    padding-bottom: 3em;
+
+    &:not(:last-child):before {
+      display: block;
+      content: '';
+      background-color: #82BBDF;
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      left: calc(50% - 1px);
+      top: 2px;
+    }
+
+    .time {
+      display: block;
+      width: 40%;
+      float: left;
+      text-align: right;
+      font-weight: 700;
+    }
+
+    .ball {
+      width: 12px;
+      height: 12px;
+      border-radius: 12px;
+      background-color: #82BBDF;
+      position: absolute;
+      left: calc(50% - 6px);
+      top: 2px;
+    }
+
+    .description {
+      display: block;
+      width: 40%;
+      float: right;
+    }
+
+    .clear {
+      clear: both;
+    }
+  }
+}

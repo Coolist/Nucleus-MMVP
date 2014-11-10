@@ -73,6 +73,8 @@
 
   textarea {
     transition: height 0.25s ease-out;
+    max-height: 200px;
+    overflow: auto;
   }
 
   button {
