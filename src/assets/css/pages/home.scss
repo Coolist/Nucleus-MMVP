@@ -523,11 +523,11 @@ a {
   }
 }
 
-/* Devics */
+/* Devices */
 
 .home-devices {
-  background: #F6F3EF;
-  text-align: center;
+  background: #FFF;
+  text-align: center;margin-top:50px;
 
   .container {
     vertical-align: middle;
@@ -535,10 +535,10 @@ a {
 
   .item {
     display: inline-block;
-    margin: 1em 0.25em;
+    margin: 2em 0.30em;
     width: 60px;
     height: 60px;
-    background: #D3CDCD;
+    background: #FFF;
     border-radius: 4px;
     text-align: center;
     overflow: hidden;
@@ -547,6 +547,53 @@ a {
       position: relative;
     }
   }
+
+  .item:hover > .device-tooltip {
+    opacity: 1;
+    transition: opacity 0.25s ease-out;
+  }
+
+  a {
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid #252525;
+      transition: all 0.5s ease;
+    }
+  }
+
+  #light { 
+    margin-right: -10px;
+  }
+
+  #light .device-tooltip {
+    margin-left: -23px;
+    }
+
+  #lock .device-tooltip {
+    margin-left: -20px;
+  }
+
+  #thermostat .device-tooltip {
+    margin-left: -45px;
+  }
+
+  #music .device-tooltip {
+    margin-left: -51px;
+  }
+
+  #sensor .device-tooltip {
+    margin-left: -29px;
+  }
+
+  .device-tooltip {
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+    position: absolute;
+    margin-top: -50px;
+  }
+
 }
 
 /* Timeline */
