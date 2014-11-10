@@ -523,10 +523,36 @@ a {
   }
 }
 
+/* Devics */
+
+.home-devices {
+  background: #F6F3EF;
+  text-align: center;
+
+  .container {
+    vertical-align: middle;
+  }
+
+  .item {
+    display: inline-block;
+    margin: 1em 0.25em;
+    width: 60px;
+    height: 60px;
+    background: #D3CDCD;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+
+    img {
+      position: relative;
+    }
+  }
+}
+
 /* Timeline */
 
 .timeline {
-  max-width: 400px;
+  max-width: 440px;
   padding-top: 4em;
   position: relative;
   margin-bottom: -3em;
@@ -573,6 +599,7 @@ a {
       display: block;
       width: 40%;
       float: right;
+      line-height: 1.4;
     }
 
     .clear {

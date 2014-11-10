@@ -33,6 +33,12 @@ var run = function() {
     $(this).parents('.toggle').children('.checkbox').prop('checked', false);
   });
 
+  $('.add.device').click(function() {
+    $(this).fadeOut();
+    $('.home-devices').slideDown();
+    $('body, html').animate({ scrollTop: $('.home-header').outerHeight() });
+  });
+
   var checkTemp = function(current) {
     if (temp != current) {
       $('.current-temperature').fadeIn();
