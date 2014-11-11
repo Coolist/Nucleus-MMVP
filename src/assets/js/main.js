@@ -69,14 +69,23 @@ var run = function() {
   var step = 0;
 
   $('.add-trigger').click(function() {
-    $('.trigger-examples').fadeIn();
+    $('.trigger-examples').css('opacity', 0).animate({
+      opacity: 1,
+      height: 'toggle'
+    });
     step = 1;
   });
 
   $('.trigger-examples .item').click(function() {
     if (step === 1) {
-      $('.add-trigger').hide();
-      $('.trigger-example').show();
+      $('.add-trigger').animate({
+        opacity: 0,
+        height: 'toggle'
+      });
+      $('.trigger-example').css('opacity', 0).animate({
+        opacity: 1,
+        height: 'toggle'
+      });
       $('.trigger-example .description').text($(this).text());
       $('.trigger-examples').fadeOut();
       $('.add-action').css('opacity', 1);
@@ -86,15 +95,24 @@ var run = function() {
 
   $('.add-action').click(function() {
     if (step === 2) {
-      $('.action-examples').fadeIn();
+      $('.action-examples').css('opacity', 0).animate({
+        opacity: 1,
+        height: 'toggle'
+      });
       step = 3;
     }
   });
 
   $('.action-examples .item').click(function() {
     if (step === 3) {
-      $('.add-action').hide();
-      $('.action-example').show();
+      $('.add-action').animate({
+        opacity: 0,
+        height: 'toggle'
+      });
+      $('.action-example').css('opacity', 0).animate({
+        opacity: 1,
+        height: 'toggle'
+      });
       $('.action-example .description').text($(this).text());
       $('.action-examples').fadeOut();
       step = 4;
