@@ -162,16 +162,6 @@ a {
     }
   }
 
-  a {
-    border-bottom:2px solid transparent;
-
-    &:hover {
-      border-bottom:2px solid #252525;
-      transition: all 0.5s ease;
-    }
-
-  }
-
   span.logo {
     font-size: 15px;
     font-weight: 700;
@@ -686,7 +676,7 @@ a {
 
 .example {
   display: none;
-  
+
   .type {
     display: block;
     opacity: 0.4;
@@ -697,5 +687,21 @@ a {
     font-size: 1.2em;
     font-weight: 500;
     margin-top: 0.4em;
+  }
+}
+
+.restart {
+  text-align: center;
+  padding-top: 3em;
+  display: none;
+
+  img {
+    opacity: 0.75;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
   }
 }

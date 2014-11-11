@@ -137,16 +137,14 @@ var run = function() {
 
   $('.trigger-examples .item').click(function() {
     if (step === 1) {
-      $('.add-trigger').animate({
+      $('.add-trigger').fadeOut(200, function() {
+        $('.trigger-example').css('opacity', 1).fadeIn(200);
+      });
+      $('.trigger-example .description').text($(this).text());
+      $('.trigger-examples').animate({
         opacity: 0,
         height: 'toggle'
       });
-      $('.trigger-example').css('opacity', 0).animate({
-        opacity: 1,
-        height: 'toggle'
-      });
-      $('.trigger-example .description').text($(this).text());
-      $('.trigger-examples').fadeOut();
       $('.add-action').css('opacity', 1);
       step = 2;
     }
@@ -154,7 +152,7 @@ var run = function() {
 
   $('.add-action').click(function() {
     if (step === 2) {
-      $('.action-examples').css('opacity', 0).animate({
+      $('.action-examples').css('opacity', 1).animate({
         opacity: 1,
         height: 'toggle'
       });
@@ -164,17 +162,50 @@ var run = function() {
 
   $('.action-examples .item').click(function() {
     if (step === 3) {
-      $('.add-action').animate({
+      $('.add-action').fadeOut(200, function() {
+        $('.action-example').css('opacity', 1).fadeIn(200);
+      });
+      $('.action-example .description').text($(this).text());
+      $('.action-examples').animate({
         opacity: 0,
         height: 'toggle'
       });
-      $('.action-example').css('opacity', 0).animate({
+
+      $('.restart').css('opacity', 0).show();
+
+      setTimeout(function() {
+        $('.restart').animate({
+          opacity: 1
+        });
+      }, 600);
+
+      step = 4;
+    }
+  });
+
+  $('.restart').click(function() {
+    if (step === 4) {
+      $('.restart').animate({
+        opacity: 0,
+        height: 'toggle'
+      });
+      $('.action-example').animate({
+        opacity: 0,
+        height: 'toggle'
+      });
+      $('.trigger-example').animate({
+        opacity: 0,
+        height: 'toggle'
+      });
+      $('.add-trigger').css('opacity', 0).animate({
         opacity: 1,
         height: 'toggle'
       });
-      $('.action-example .description').text($(this).text());
-      $('.action-examples').fadeOut();
-      step = 4;
+      $('.add-action').css('opacity', 0).animate({
+        opacity: 0.4,
+        height: 'toggle'
+      });
+      step = 0;
     }
   });
 
