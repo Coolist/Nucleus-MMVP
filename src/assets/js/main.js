@@ -46,7 +46,7 @@ var run = function() {
     var parentName = $(me).parents('.block').children('h4').text();
     console.log($(me).attr('checked'));
 
-    if ($(me).attr('checked')) {
+    if ($(me).prop('checked')) {
       if (parentName == 'Belkin Wall Switch') {
         addHistory(parentName + ' set to on.');
       }
@@ -95,13 +95,18 @@ var run = function() {
     }
   };
 
+  var historyTimeout = setTimeout(function() {}, 1);
+
   $('.chevron-up').click(function() {
     temp++;
 
     $('.temperature .number').text(temp);
     checkTemp(68);
 
-    addHistory('Thermostat set to ' + temp + ' degrees.');
+    clearTimeout(historyTimeout);
+    historyTimeout = setTimeout(function() {
+      addHistory('Thermostat set to ' + temp + ' degrees.');
+    }, 1000);
 
     return false;
   });
@@ -112,7 +117,10 @@ var run = function() {
     $('.temperature .number').text(temp);
     checkTemp(68);
 
-    addHistory('Thermostat set to ' + temp + ' degrees.');
+    clearTimeout(historyTimeout);
+    historyTimeout = setTimeout(function() {
+      addHistory('Thermostat set to ' + temp + ' degrees.');
+    }, 1000);
 
     return false;
   });
