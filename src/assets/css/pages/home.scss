@@ -668,6 +668,11 @@ a {
     text-align: center;
     cursor: pointer;
 
+    @include breakpoint(small) {
+      width: calc(100% - 16px);
+      height: auto;
+    }
+
     &:hover {
       background-color: #DCD8D8;
     }
@@ -676,6 +681,10 @@ a {
 
 .example {
   display: none;
+
+  @include breakpoint(small) {
+    text-align: center;
+  }
 
   .type {
     display: block;

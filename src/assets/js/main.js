@@ -132,6 +132,7 @@ var run = function() {
       opacity: 1,
       height: 'toggle'
     });
+    $('body, html').animate({ scrollTop: $('.trigger-examples').offset().top });
     step = 1;
   });
 
@@ -146,6 +147,7 @@ var run = function() {
         height: 'toggle'
       });
       $('.add-action').css('opacity', 1);
+      $('body, html').animate({ scrollTop: $('.add-trigger').offset().top - 120 });
       step = 2;
     }
   });
@@ -156,6 +158,7 @@ var run = function() {
         opacity: 1,
         height: 'toggle'
       });
+      $('body, html').animate({ scrollTop: $('.action-examples').offset().top });
       step = 3;
     }
   });
@@ -170,6 +173,7 @@ var run = function() {
         opacity: 0,
         height: 'toggle'
       });
+      $('body, html').animate({ scrollTop: $('.trigger-example').offset().top - 120 });
 
       $('.restart').css('opacity', 0).show();
 
