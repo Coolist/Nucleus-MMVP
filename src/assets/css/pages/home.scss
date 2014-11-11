@@ -654,3 +654,48 @@ a {
     }
   }
 }
+
+/* Trigger/Action examples */
+
+.trigger-examples, .action-examples {
+  display: none;
+  padding-top: 4em;
+
+  p {
+    text-align: left;
+    margin-bottom: 1em;
+    max-width: 100%;
+  }
+
+  .item {
+    box-sizing: border-box;
+    background-color: #F7F5F2;
+    padding: 2em;
+    float: left;
+    width: calc(50% - 16px);
+    height: 7.5em;
+    margin: 8px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #DCD8D8;
+    }
+  }
+}
+
+.example {
+  display: none;
+  
+  .type {
+    display: block;
+    opacity: 0.4;
+  }
+
+  .description {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 0.4em;
+  }
+}

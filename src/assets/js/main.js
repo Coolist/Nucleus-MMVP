@@ -66,6 +66,41 @@ var run = function() {
     return false;
   });
 
+  var step = 0;
+
+  $('.add-trigger').click(function() {
+    $('.trigger-examples').slideDown();
+    step = 1;
+  });
+
+  $('.trigger-examples .item').click(function() {
+    if (step === 1) {
+      $('.add-trigger').hide();
+      $('.trigger-example').show();
+      $('.trigger-example .description').text($(this).text());
+      $('.trigger-examples').slideUp();
+      $('.add-action').css('opacity', 1);
+      step = 2;
+    }
+  });
+
+  $('.add-action').click(function() {
+    if (step === 2) {
+      $('.action-examples').slideDown();
+      step = 3;
+    }
+  });
+
+  $('.action-examples .item').click(function() {
+    if (step === 3) {
+      $('.add-action').hide();
+      $('.action-example').show();
+      $('.action-example .description').text($(this).text());
+      $('.action-examples').slideUp();
+      step = 4;
+    }
+  });
+
   // CSS Tricks Smooth Scroll: http://css-tricks.com/snippets/jquery/smooth-scrolling/
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
