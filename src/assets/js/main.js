@@ -69,7 +69,7 @@ var run = function() {
   var step = 0;
 
   $('.add-trigger').click(function() {
-    $('.trigger-examples').slideDown();
+    $('.trigger-examples').fadeIn();
     step = 1;
   });
 
@@ -78,7 +78,7 @@ var run = function() {
       $('.add-trigger').hide();
       $('.trigger-example').show();
       $('.trigger-example .description').text($(this).text());
-      $('.trigger-examples').slideUp();
+      $('.trigger-examples').fadeOut();
       $('.add-action').css('opacity', 1);
       step = 2;
     }
@@ -86,7 +86,7 @@ var run = function() {
 
   $('.add-action').click(function() {
     if (step === 2) {
-      $('.action-examples').slideDown();
+      $('.action-examples').fadeIn();
       step = 3;
     }
   });
@@ -96,7 +96,7 @@ var run = function() {
       $('.add-action').hide();
       $('.action-example').show();
       $('.action-example .description').text($(this).text());
-      $('.action-examples').slideUp();
+      $('.action-examples').fadeOut();
       step = 4;
     }
   });
