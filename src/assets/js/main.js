@@ -227,7 +227,9 @@ var run = function() {
       e.preventDefault();
     }
 
-    $('.error-text').slideDown();
+    $('.error-text').animate({
+      opacity: 1
+    });
   });
 
   $('.js-signup input[name="name"]').focus(function() {

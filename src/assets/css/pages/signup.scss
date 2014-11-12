@@ -20,6 +20,7 @@
 
 .signup-form {
   padding-top: 2em;
+  position: relative;
 
   ::-webkit-input-placeholder {
      color: #252525;
@@ -38,7 +39,7 @@
 
   :-ms-input-placeholder {  
      color: #252525;
-     opacity: 0.75;  
+     opacity: 0.75;
   }
 
   .container {
@@ -46,11 +47,16 @@
   }
 
   .error-text {
+    box-sizing: border-box;
     color: #E23C3C;
     text-align: center;
+    position: absolute;
     display: block;
-    padding: 0.5em;
-    display: none;
+    opacity: 0;
+    width: 100%;
+    top: 0.8em;
+    left: 0;
+    right: 0;
   }
 
   label {
@@ -60,6 +66,7 @@
     padding: 1em;
 
     &.error {
+      transition: all 1s ease;
       background-color: #FB9090;
     }
 
