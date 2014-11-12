@@ -213,6 +213,31 @@ var run = function() {
     }
   });
 
+  $('.js-signup').submit(function(e) {
+    var name = $('.js-signup input[name="name"]').val(),
+        email = $('.js-signup input[name="email"]').val();
+
+    if (name == '') {
+      $('.js-signup input[name="name"]').parent().addClass('error');
+      e.preventDefault();
+    }
+
+    if (email == '') {
+      $('.js-signup input[name="email"]').parent().addClass('error');
+      e.preventDefault();
+    }
+
+    $('.error-text').slideDown();
+  });
+
+  $('.js-signup input[name="name"]').focus(function() {
+    $('.js-signup input[name="name"]').parent().removeClass('error');
+  });
+
+  $('.js-signup input[name="email"]').focus(function() {
+    $('.js-signup input[name="email"]').parent().removeClass('error');
+  });
+
   // CSS Tricks Smooth Scroll: http://css-tricks.com/snippets/jquery/smooth-scrolling/
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

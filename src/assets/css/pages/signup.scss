@@ -45,11 +45,23 @@
     max-width: 380px;
   }
 
+  .error-text {
+    color: #E23C3C;
+    text-align: center;
+    display: block;
+    padding: 0.5em;
+    display: none;
+  }
+
   label {
     display: block;
     background-color: #F6F3EF;
     margin: 0.8em 0;
     padding: 1em;
+
+    &.error {
+      background-color: #FB9090;
+    }
 
     span {
       display: block;
@@ -88,6 +100,7 @@
     color: #FFF;
     padding: 1em 0;
     margin-top: 1em;
+    outline: none;
 
     &:hover {
       background-color: darken(#82BBDF, 5);
